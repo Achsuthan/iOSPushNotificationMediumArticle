@@ -11,6 +11,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        UNUserNotificationCenter.current().delegate = self
         self.registerForNotification()
         return true
     }
@@ -56,5 +57,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Here the device token will be received, once notification registration got successful
         // We can send to our own backend or we can pass this data to the push notificaiton services(Firebase, OneSignal, etc), this configurations is based on the push notification serivice providers.
         print("Device Token \(deviceToken.map { String(format: "%02.2hhx", $0) }.joined())")
+    }
+}
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+
+        completionHandler([.sound, .aler])
     }
 }
