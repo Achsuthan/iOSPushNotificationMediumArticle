@@ -1,0 +1,10 @@
+{
+  "Simulator Target Bundle": "com.achsuthan.iOSPushNotificationSetup",
+  "aps": {
+    "badge": 1,
+    "alert": {
+      "title": "Push Notification Test",
+      "body": "Testing it from Simulator"
+    }
+  }
+}
