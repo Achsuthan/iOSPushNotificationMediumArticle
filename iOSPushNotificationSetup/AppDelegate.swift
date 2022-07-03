@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UNUserNotificationCenter.current().delegate = self
         self.registerForNotification()
+        UIApplication.shared.applicationIconBadgeNumber = 0
         return true
     }
 
@@ -34,10 +35,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func registerForNotification() {
         let userNotificationCentre = UNUserNotificationCenter.current()
-        userNotificationCentre.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
-
+        var authorizationOptions: UNAuthorizationOptions = []
+        if #available(iOS 12.0, *) {
+            authorizationOptions = [.alert, .badge, .sound, .provisional]
+        } else {
+            authorizationOptions = [.alert, .badge, .sound]
+        }
+        
+        userNotificationCentre.requestAuthorization(options: authorizationOptions) { (granted, error) in
+            
             guard error == nil else {
-
+                
                 // This should be done with main thread
                 DispatchQueue.main.async {
                     // If requried we can do some action here
