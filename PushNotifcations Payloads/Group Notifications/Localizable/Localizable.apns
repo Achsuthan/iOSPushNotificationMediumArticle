@@ -1,0 +1,11 @@
+{
+  "Simulator Target Bundle": "com.achsuthan.iOSPushNotificationSetup",
+  "aps": {
+    "alert": {
+      "title-loc-key": "PUSH_TITLE",
+      "title-loc-args": ["2021-07-31"],
+      "loc-key": "PUSH_MESSAGE",
+      "loc-args": ["123", "234"]
+    }
+  }
+}
