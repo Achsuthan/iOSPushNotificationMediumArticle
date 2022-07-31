@@ -1,0 +1,10 @@
+{
+  "Simulator Target Bundle": "com.achsuthan.iOSPushNotificationSetup",
+  "aps": {
+    "alert": {
+      "title": "Ind Vs Eng",
+      "body": "oops... Match got delayed due to rain"
+    },
+    "thread-id": "IndVsEng_1001"
+  }
+}

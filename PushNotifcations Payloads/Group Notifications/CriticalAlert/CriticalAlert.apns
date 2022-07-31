@@ -1,0 +1,14 @@
+{
+  "Simulator Target Bundle": "com.achsuthan.iOSPushNotificationSetup",
+  "aps": {
+    "alert": {
+      "title": "Push Notification Test",
+      "body": "Testing it from Simulator"
+    },
+    "sound": {
+      "critial": 1,
+      "name": "filename.caf",
+      "volume": 0.75
+    }
+  }
+}

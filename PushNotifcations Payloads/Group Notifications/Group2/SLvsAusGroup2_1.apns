@@ -1,0 +1,10 @@
+{
+  "Simulator Target Bundle": "com.achsuthan.iOSPushNotificationSetup",
+  "aps": {
+    "alert": {
+      "title": "SL Vs Aus",
+      "body": "Austraila got all out for 321 and lead 109"
+    },
+    "thread-id": "SLvsAus_1001"
+  }
+}

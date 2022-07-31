@@ -1,0 +1,7 @@
+{
+    "Simulator Target Bundle": "com.achsuthan.iOSPushNotificationSetup",
+    "aps": {
+        "content-available": 1
+    },
+    "data": "some data here"
+}

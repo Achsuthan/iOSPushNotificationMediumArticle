@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let userNotificationCentre = UNUserNotificationCenter.current()
         var authorizationOptions: UNAuthorizationOptions = []
         if #available(iOS 12.0, *) {
-            authorizationOptions = [.alert, .badge, .sound, .provisional]
+            authorizationOptions = [.alert, .badge, .sound]
         } else {
             authorizationOptions = [.alert, .badge, .sound]
         }
@@ -73,5 +73,10 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
 
         completionHandler([.sound, .alert])
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        // Handle the background notificaiton here
+        completionHandler(.newData)
     }
 }

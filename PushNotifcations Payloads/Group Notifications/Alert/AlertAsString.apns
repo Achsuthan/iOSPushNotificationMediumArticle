@@ -1,0 +1,6 @@
+{
+  "Simulator Target Bundle": "com.achsuthan.iOSPushNotificationSetup",
+  "aps": {
+    "alert": "Hello World!"
+  }
+}

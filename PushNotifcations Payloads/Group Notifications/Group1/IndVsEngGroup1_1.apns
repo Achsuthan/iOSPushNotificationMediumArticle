@@ -1,0 +1,10 @@
+{
+  "Simulator Target Bundle": "com.achsuthan.iOSPushNotificationSetup",
+  "aps": {
+    "alert": {
+      "title": "Ind Vs Eng",
+      "body": "That's out Root got dismissed by Bumrah"
+    },
+    "thread-id": "IndVsEng_1001"
+  }
+}
